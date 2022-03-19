@@ -1,6 +1,7 @@
 ---
 title: "meme.R"
 output: html_document
+author: Tabitha Dudley
 date: '2022-03-19'
 ---
 
