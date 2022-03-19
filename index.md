@@ -1,6 +1,6 @@
-# Assignment 1 - meme.R
+# Assignment 1 
 
-## Part A:
+## Part A - Meme:
 - Set-up an appropriate GitHub account and course repository.
 - Develop an original meme using R markdown, including the magick package.
 
