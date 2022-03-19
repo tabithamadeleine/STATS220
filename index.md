@@ -17,7 +17,7 @@
 *Content* - I wanted my meme to be interpretable to the majority of people. Most people should be able to relate to the content used in my meme, either through lived experience or through exposure to similar concepts via social media. The images used are funny on their own, so even if the text content evokes a "cringe" feeling from the viewer (possibly from relating to the mentioned experience), they should still find the meme entertaining. I used Comic Sans for my text headers as this font is widely regarded for being used in memes. I made sure to use font colours which ensure the text can be easily read and which feature in the images. I removed unneccessary white-space from the images and ensured that all text fit nicely to utilise the shape space. I believe the overall styling of my meme is in-line with other memes of the same format. 
 
 **Code creation of my meme:**
-```
+```{r}
 library(magick)
 
 party_llama <- image_read("https://i.imgflip.com/tr8f3.jpg") %>%
