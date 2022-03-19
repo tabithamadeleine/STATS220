@@ -1,0 +1,36 @@
+---
+title: "meme.R"
+output: html_document
+date: '2022-03-19'
+---
+
+```{r}
+library(magick)
+
+party_llama <- image_read("https://i.imgflip.com/tr8f3.jpg") %>%
+  image_scale(500)
+
+work_llama <- image_read("http://www.pinjarraalpacas.com.au/content/image/full/Resources_Alpaca-at-Work---Pinjarra-Alpacas-For-Sale_44.jpg") %>%
+  image_scale(500)
+
+party_text <- image_blank(width = 500, height = 377, color = "#000000") %>%
+  image_annotate(text = "Sunday Brunch", color = "#00FF00", size = 70, font = "Comic Sans MS", gravity = "north") %>%
+  image_annotate(text = "\n- haven't been home yet\n- sunnies on\n- hair's a mess\n- phone's dead", color = "#FFFFFF", size= 40, font = "Georgia", gravity = "center") 
+
+work_text <- image_blank(width = 500, height = 500, color = "#000000") %>%
+  image_annotate(text = "Monday Morning", color = "#3398FF", size = 65, font = "Comic Sans MS", gravity = "north") %>%
+  image_annotate(text = "- 3 coffees deep\n- semi-presentable\n- slaving away so you\ncan do it again\nnext weekend", color = "#FFFFFF", size = 40, font = "Georgia", gravity = "center")
+
+
+first_row <- c(party_llama, party_text) %>%
+  image_append()
+second_row <- c(work_llama, work_text) %>%
+  image_append()
+
+meme <- c(first_row, second_row) %>%
+  image_append(stack = TRUE)
+
+image_write(meme, "my_meme.png")
+```
+
+
