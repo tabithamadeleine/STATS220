@@ -1,0 +1,74 @@
+---
+title: "Assignment 1"
+subtitle: "STATS 220 Semester One 2022"
+output: 
+  html_document: 
+    highlight: pygments
+    code_folding: hide
+author: Tabitha Dudley
+date: '2022-03-19'
+---
+
+```{css class.source = "pink_back"}
+.pink_back {
+background-color: #fadeeb
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+body {font-family: 'Roboto Condensed', sans-serif;background-color: #fcfaae}
+
+h1 {font-family: 'Roboto Condensed', sans-serif; font-weight: 600; color: #f74db9}
+h2 {font-family: 'Roboto Condensed', sans-serif; font-weight: 500; color: #f74db9}
+```
+
+## GitHub repository information
+
+<img src = "https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"
+alt = "GitHub logo"
+style = "height: 150px; width: 150px;"/>
+
+My GitHub STATS220 repository can be found [**here**](https://github.com/tabithamadeleine/STATS220)!
+
+This repository is where I will be sharing and uploading work relating to assignments in my Courses at UoA, inlcuding STATS 220. The link can be used to navigate to my main GitHub profile, where my other repositories may be found.
+
+## Animated GIF creation
+
+```{r class.source = "pink_back",  echo = TRUE, warning = FALSE, message = FALSE}
+library(magick)
+
+#creating the frames; image with text title (season) and dates (months)
+
+frame1 <- image_read("https://images.theconversation.com/files/20706/original/dkkvsc9j-1361934641.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip") %>%
+  image_scale(500) %>%
+  image_annotate(text = "Summer", color = "#FFFFFF", size = 80, font = "Georgia", gravity = "center") %>%
+  image_annotate(text = "December - February", color = "#FFFFFF", size = 30, font = "Impact", gravity = "south")
+
+frame2 <- image_read("https://images.ctfassets.net/cnu0m8re1exe/4zKwhxkDNWjolQpZXbo91l/c881c2ef73b9e00ab3bbab3022e226c7/autumn_color.jpg?fm=jpg&fl=progressive&w=660&h=433&fit=fill") %>%
+  image_scale(500) %>%
+  image_annotate(text = "Autumn", color = "#FFFFFF", size = 80, font = "Georgia", gravity = "center")%>%
+  image_annotate(text = "March - May", color = "#FFFFFF", size = 30, font = "Impact", gravity = "south")
+
+frame3 <- image_read("https://phantom-marca.unidadeditorial.es/742d5ef318e57afcd4e110dbadb48b2c/crop/0x43/700x435/resize/660/f/webp/assets/multimedia/imagenes/2021/12/19/16399296587282.jpg") %>%
+  image_scale(500) %>%
+  image_annotate(text = "Winter", color = "#FFFFFF", size = 80, font = "Georgia", gravity = "center")%>%
+  image_annotate(text = "June - August", color = "#FFFFFF", size = 30, font = "Impact", gravity = "south")
+
+frame4 <- image_read("https://www.almanac.com/sites/default/files/users/AlmanacStaffArchive/daffodils-in-spring_full_width.jpg") %>%
+  image_scale(460) %>%
+  image_annotate(text = "Spring", color = "#FFFFFF", size = 80, font = "Georgia", gravity = "center")%>%
+  image_annotate(text = "September - November", color = "#FFFFFF", size = 30, font = "Impact", gravity = "south")
+
+# creating vector for ordering the frames
+frames <- c(frame1, frame2, frame3, frame4)
+
+#creating the gif animation; (>fps too fast to read but can amend slower)
+image_animate(frames, fps = 1)
+
+```
+
+## Learning Reflection
+
+Before Module 1 I had extremely limited experience in HTML/CSS. I have used R for a couple of years, but only ever for statistical analysis, and I hadn't realised how great an opportunity there was within R markdown to customise and personalise data. I am really excited to use these new skills to make my future assignments and work projects pop! I would be interested in further exploring how to integrate python into markdown, since I regularly use R and Python, and this would allow me to bring together the different projects I am working on into a single presentation. The module has also encouraged me to further develop my GitHub profile and try building my own website. I believe the ideas from this module have helped me to better understand how and where different technologies can come together, making it much easier and more exciting to share data.
+
+![](https://img.freepik.com/free-vector/daisy-flowers-seamless-pattern-cartoon-floral-border_267448-172.jpg?w=1380)
