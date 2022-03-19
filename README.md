@@ -2,11 +2,10 @@
 
 This repo relates to my assignments for STATS220 via UoA.
 
-*Direct link to my STATS220 repo [here!](https://github.com/tabithamadeleine/STATS220)* 
+#### Assignment 1 
+- *Develop an original meme and gif*
+  - R markdown
+  - HTML
+  - CSS
 
-#### Assignment 1 - meme.R
-- *info about assignment*
-  - tools used etc
-  - purpose etc
-
-- *link to A1 page* via page convert
+- *Click here to go directly to A1: Part A*
