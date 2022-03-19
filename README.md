@@ -8,4 +8,4 @@ This repo relates to my assignments for STATS220 via UoA.
   - HTML
   - CSS
 
-- *Click here to go directly to A1: Part A*
+- *Click [**here**](https://tabithamadeleine.github.io/STATS220/) to go directly to A1: Part A*
